@@ -4,9 +4,34 @@ namespace Day5BasicPrograms
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public class Factor
         {
-            Console.WriteLine("Welcom To Basic Core Programs");
+
+            public void Factor_Of_Number(int number)
+            {
+
+                for (int i = 1; i < number; i++)
+                {
+                    if (number % i == 0)
+                    {
+                        Console.WriteLine($"Factors of Given Number are: {i}");
+
+                    }
+                }
+            }
+        }
+        internal class Programs
+        {
+            public static void Main(string[] args)
+            {
+
+                Console.WriteLine("Enter Number");
+                int number = Convert.ToInt32(Console.ReadLine());
+                Factor f = new Factor();
+                f.Factor_Of_Number(number);
+            }
         }
     }
 }
+
+
